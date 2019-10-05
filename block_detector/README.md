@@ -1,17 +1,14 @@
-# Interdependence Task Experiment Runner - Vision
+# block_detector
 
 ##  Overview
 
-
-## Contact
-Curt Henrichs (cdhenrichs@wisc.edu)
 
 ## Calibrate
 
 
 ## Run
-Enter following into terminal to run ITER vision
+Enter following into terminal:
 
 ```
-roslaunch iter_vision main.launch video_src:=/dev/video0
+roslaunch block_detector main.launch video_src:=/dev/video0
 ```

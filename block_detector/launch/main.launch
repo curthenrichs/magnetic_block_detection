@@ -24,7 +24,7 @@
 <!--  Camera Setup                                                           -->
 <!--=========================================================================-->
 
-  <include file="$(find iter_vision)/launch/camera.launch">
+  <include file="$(find block_detector)/launch/camera.launch">
     <arg name="video_src" value="$(arg video_src)" />
     <arg name="use_real_cam" value="$(arg use_real_cam)" />
     <arg name="static_cam_image" value="$(arg static_cam_image)" />
@@ -36,7 +36,7 @@
 <!--  Block Vision System                                                       -->
 <!--=========================================================================-->
 
-  <include file="$(find iter_vision)/launch/pipeline.launch">
+  <include file="$(find block_detector)/launch/pipeline.launch">
     <arg name="output_tf_frame" value="$(arg output_tf_frame)" />
     <arg name="flag_image_view_blocks" value="$(arg flag_image_view_blocks)" />
     <arg name="flag_image_view_blocks_filter" value="$(arg flag_image_view_blocks_filter)" />
@@ -44,7 +44,7 @@
     <arg name="capture_training_data" value="$(arg capture_training_data)" />
   </include>
 
-  <node if="$(arg use_tf_bridge)" name="tf_bridge" pkg="iter_vision" type="tf_bridge.py">
+  <node if="$(arg use_tf_bridge)" name="tf_bridge" pkg="block_detector" type="tf_bridge.py">
     <param name="tf_ns" value="$(arg tf_ns)"/>
   </node>
 

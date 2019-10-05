@@ -3,7 +3,7 @@
   <arg name="video_src_0" default="/dev/video1"/>
   <arg name="video_src_1" default="/dev/video2"/>
 
-  <include ns="cam_1" file="$(find iter_vision)/launch/main.launch">
+  <include ns="cam_1" file="$(find block_detector)/launch/main.launch">
     <arg name="video_src" value="$(arg video_src_0)"/>
     <arg name="use_real_cam" value="true"/>
     <arg name="output_tf_frame" value="map"/>
@@ -17,7 +17,7 @@
     <arg name="flag_image_view_2d_points" value="true" />
   </include>
 
-  <include ns="cam_2" file="$(find iter_vision)/launch/main.launch">
+  <include ns="cam_2" file="$(find block_detector)/launch/main.launch">
     <arg name="video_src" value="$(arg video_src_1)"/>
     <arg name="use_real_cam" value="true"/>
     <arg name="output_tf_frame" default="map"/>
@@ -31,11 +31,11 @@
     <arg name="flag_image_view_2d_points" value="true" />
   </include>
 
-  <node name="two_camera_agreement" pkg="iter_vision" type="two_camera_agreement.py">
+  <node name="two_camera_agreement" pkg="block_detector" type="two_camera_agreement.py">
     <!--TODO-->
   </node>
 
-  <node name="robot_camera_align" pkg="iter_vision" type="robot_camera_align.py">
+  <node name="robot_camera_align" pkg="block_detector" type="robot_camera_align.py">
     <param name="reference_frame" value="map"/>
   </node>
 

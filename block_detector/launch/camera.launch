@@ -32,7 +32,7 @@
   <group unless="$(arg use_real_cam)">
     <node name="static_cam" pkg="iter_vision" type="static_camera.py" output="screen">
       <param name="~publish_rate" value="5" />
-      <param name="~image_filepath" value="$(find iter_vision)/images/$(arg static_cam_image)"/>
+      <param name="~image_filepath" value="$(find block_detector)/images/$(arg static_cam_image)"/>
       <param name="~camera_ns" value="static_cam"/>
 
       <remap from="static_cam/camera_info" to="usb_cam/camera_info"/>
