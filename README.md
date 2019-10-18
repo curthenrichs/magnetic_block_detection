@@ -1,4 +1,4 @@
-# magentic_block_detection
+# magnetic_block_detection
 This system was developed to detect and locate wooden magnetic blocks within a
 region bounded by at least three Alvar AR tags.
 
