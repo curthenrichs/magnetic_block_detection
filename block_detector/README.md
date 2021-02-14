@@ -17,9 +17,6 @@ Multi-camera ROS nodes:
 - tf_bridge ~ TF Bridge maps from internal tf space for vision pipeline into the global tf tree.
 - two_camerea_agreement ~ Generates the final environment sense from multiple cameras.
 
-## Calibrate
-
-
 ## Install
 Make sure to install the necessary camera ROS drivers. For instance if using a USB webcam then install [usb_cam](http://wiki.ros.org/usb_cam).
 
@@ -40,3 +37,6 @@ Enter following into terminal:
 ```
 roslaunch block_detector main.launch video_src:=<video-device e.g., /dev/video0>
 ```
+
+## Calibrate
+To calibrate, you will need to move the robot's end-effector into the camera's field of view. The end-effector should have an AR tag attached (make note of which one for calibration). Then you can start the calibration procedure with the `robot_camera_align` node. This node will capture the current TFs of the robot and camera to work out the relationship using the AR marker. I recommend moving the robot slowly in the scene to get better averaging during this process. Once complete, the configuration file will be saved for future use.
