@@ -16,9 +16,9 @@ Global TFs:
 import copy
 import rospy
 
-from iter_vision.msg import BlockPose3D, BlockPose3DArray
+from block_detector.msg import BlockPose3D, BlockPose3DArray
 from ar_track_alvar_msgs.msg import AlvarMarker, AlvarMarkerArray
-from iter_vision.srv import ColorSelect, ColorSelectRequest, ColorSelectResponse
+from block_detector.srv import ColorSelect, ColorSelectRequest, ColorSelectResponse
 
 
 class TwoCameraAgreement:

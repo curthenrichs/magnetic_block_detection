@@ -30,8 +30,8 @@ from shapely import geometry
 
 from std_msgs.msg import Header
 from sensor_msgs.msg import CameraInfo
-from iter_vision.msg import BlockPose2D, BlockPose2DArray
-from iter_vision.msg import BlockPose3D, BlockPose3DArray
+from block_detector.msg import BlockPose2D, BlockPose2DArray
+from block_detector.msg import BlockPose3D, BlockPose3DArray
 from geometry_msgs.msg import PoseArray, Pose, Pose2D, Vector3, Quaternion
 from ar_track_alvar_msgs.msg import AlvarMarker2D, AlvarMarker2DArray
 from ar_track_alvar_msgs.msg import AlvarMarker, AlvarMarkerArray

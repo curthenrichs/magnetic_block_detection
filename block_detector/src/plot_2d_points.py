@@ -17,7 +17,7 @@ import rospy
 import numpy as np
 
 from sensor_msgs.msg import CompressedImage
-from iter_vision.msg import BlockPose2D, BlockPose2DArray
+from block_detector.msg import BlockPose2D, BlockPose2DArray
 from ar_track_alvar_msgs.msg import AlvarMarker2D, AlvarMarker2DArray
 
 sys.path.append('/opt/ros/kinetic/lib/python2.7/dist-packages')

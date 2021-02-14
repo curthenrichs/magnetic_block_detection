@@ -11,11 +11,13 @@ The Alvar subsystem is a modified verison of the official package. The only chan
 
 Our package (block_detector) provides the 2D to 3D mapping code, simple computer vision block detector, and calibration code. We also have an experimental multi-camera pipeline (though it is still in development). Please refer to the package's [README](./block_detector/README.md) for more details.
 
+Note, block_detector already has the following python modules within the package:
+- [christophhagen/averaging-quaternions](https://github.com/christophhagen/averaging-quaternions) ~ Please see the [README](./block_detector/src/averaging_quaternions/README.md).
+
 ## Install
 Make sure to install the necessary camera ROS drivers. For instance if using a USB webcam then install [usb_cam](http://wiki.ros.org/usb_cam).
 
 Then install the following python modules:
-- [christophhagen/averaging-quaternions](https://github.com/christophhagen/averaging-quaternions)
 - [scikit-learn](https://pypi.org/project/scikit-learn/)
   - [numpy](https://pypi.org/project/numpy/)
   - [matplotlib](https://pypi.org/project/matplotlib/)

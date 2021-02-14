@@ -1,8 +1,21 @@
 # block_detector
 Provides the 2D to 3D mapping code, simple computer vision block detector, and calibration code.
 
-##  Overview
+## Nodes
 
+General ROS nodes:
+
+- block_pose ~ Converts from 2D BlockPose coordinates to 3D BlockPose coordinates.
+- block_vision ~ Provides block_detector with ability to capture blocks from a vision.
+- data_sampler ~ Prints training data format for the vision model based on valid blocks.
+- plot_2d_points ~ Plot 2D AR points found to image.
+- robot_camera_align ~ Uses an AR tag on the robot gripper to calibrate relationship between camera, base_link, and end_effector TFs.
+- static_camera ~ Provides a static image source from file provided.
+
+Multi-camera ROS nodes:
+
+- tf_bridge ~ TF Bridge maps from internal tf space for vision pipeline into the global tf tree.
+- two_camerea_agreement ~ Generates the final environment sense from multiple cameras.
 
 ## Calibrate
 
@@ -11,13 +24,15 @@ Provides the 2D to 3D mapping code, simple computer vision block detector, and c
 Make sure to install the necessary camera ROS drivers. For instance if using a USB webcam then install [usb_cam](http://wiki.ros.org/usb_cam).
 
 Then install the following python modules:
-- [christophhagen/averaging-quaternions](https://github.com/christophhagen/averaging-quaternions)
 - [scikit-learn](https://pypi.org/project/scikit-learn/)
   - [numpy](https://pypi.org/project/numpy/)
   - [matplotlib](https://pypi.org/project/matplotlib/)
 - [cv2](https://pypi.org/project/opencv-python/
 - [shapely](https://pypi.org/project/Shapely/)
 - [yaml](https://pypi.org/project/PyYAML/)
+
+Note, block_detector already has the following python modules within the package:
+- [christophhagen/averaging-quaternions](https://github.com/christophhagen/averaging-quaternions) ~ Please see the [README](./block_detector/src/averaging_quaternions/README.md).
 
 ## Run
 Enter following into terminal:

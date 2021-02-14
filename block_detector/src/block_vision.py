@@ -5,7 +5,7 @@ BlockVision Node
 Author: Curt Henrichs
 Date: 5-22-19
 
-Provides ITER with ability to capture blocks from a vision
+Provides block_detector with ability to capture blocks from a vision
 
 This node requires installation of opencv and its python wrapper. Additionally,
 this node requires the usb_cam node be running in order to provide an image
@@ -49,8 +49,8 @@ import numpy as np
 
 from geometry_msgs.msg import Pose2D
 from sensor_msgs.msg import CompressedImage
-from iter_vision.msg import BlockPose2D, BlockPose2DArray
-from iter_vision.srv import ColorSelect, ColorSelectRequest, ColorSelectResponse
+from block_detector.msg import BlockPose2D, BlockPose2DArray
+from block_detector.srv import ColorSelect, ColorSelectRequest, ColorSelectResponse
 
 
 MODEL_FILEPATH = os.path.join(os.path.dirname(__file__),'model/block_classifer.nn')
