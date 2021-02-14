@@ -24,7 +24,7 @@ Then install the following python modules:
 - [scikit-learn](https://pypi.org/project/scikit-learn/)
   - [numpy](https://pypi.org/project/numpy/)
   - [matplotlib](https://pypi.org/project/matplotlib/)
-- [cv2](https://pypi.org/project/opencv-python/
+- [cv2](https://pypi.org/project/opencv-python/)
 - [shapely](https://pypi.org/project/Shapely/)
 - [yaml](https://pypi.org/project/PyYAML/)
 
