@@ -1,2 +1,2 @@
 Header header
-iter_vision/BlockPose2D[] blocks
+block_detector/BlockPose2D[] blocks
